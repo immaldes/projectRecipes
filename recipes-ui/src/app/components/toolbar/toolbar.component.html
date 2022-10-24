@@ -1,0 +1,16 @@
+<mat-toolbar>
+    <span><img width="60" src="https://atos.net/wp-content/themes/atos/images/atos-logo-white-2021.png" (click)="router.navigate(['home'])"/></span>
+  
+  
+    <span class="toolbar-spacer"></span>
+    <span>{{userName}}</span>
+    <button mat-icon-button (click)="goMyProfile()">
+      <mat-icon>person</mat-icon>
+    </button>
+    <button mat-icon-button *ngIf="!login" (click)="onClick()">
+      <mat-icon>login</mat-icon>
+    </button>
+    <button mat-icon-button *ngIf="login" (click)="onClick()">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar>
